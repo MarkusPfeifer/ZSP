@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="at.pfeifer.zsp.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Strom"
+        android:id="@+id/textViewStrom"
+        android:textSize="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wasser"
+        android:id="@+id/textViewWasser"
+        android:textSize="25dp"
+        android:layout_below="@+id/editTextStrom"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Datum"
+        android:id="@+id/textViewDatum"
+        android:textSize="25dp"
+        android:layout_below="@+id/loadWasser"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewStrom"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/saveStrom"
+        android:text="Save"
+        android:onClick="onClickSaveStrom"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/saveWasser"
+        android:onClick="onClickSaveWasser"
+        android:layout_alignTop="@+id/loadWasser"
+        android:layout_toRightOf="@+id/loadStroms"
+        android:layout_toEndOf="@+id/loadStroms" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/loadStroms"
+        android:text="load"
+        android:layout_alignBottom="@+id/saveStrom"
+        android:layout_toLeftOf="@+id/saveStrom"
+        android:layout_toStartOf="@+id/saveStrom"
+        android:onClick="onClickLoadStrom"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Load"
+        android:id="@+id/loadWasser"
+        android:onClick="onClickLoadWasser"
+        android:layout_alignTop="@+id/editTextWasser"
+        android:layout_toLeftOf="@+id/saveWasser"
+        android:layout_toStartOf="@+id/saveWasser" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextStrom"
+        android:layout_below="@+id/textViewStrom"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextWasser"
+        android:layout_below="@+id/textViewWasser"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextDatum"
+        android:layout_below="@+id/textViewDatum"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
